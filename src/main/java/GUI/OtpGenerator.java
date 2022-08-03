@@ -1,3 +1,7 @@
+/**
+ * OTP Generator created by Mustensur Khan
+ * This is a tool that will allow users to generate the OTP by providing a secret.
+ */
 package GUI;
 
 
@@ -9,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import org.jboss.aerogear.security.otp.Totp;
 
-public class GUI implements ActionListener
+public class OtpGenerator implements ActionListener
 {
 
     private JTextField otpLabel;
@@ -20,7 +24,7 @@ public class GUI implements ActionListener
     private JButton copyOtp;
     private JTextField textField;
 
-    public GUI()
+    public OtpGenerator()
     {
         frame = new JFrame();
         panel = new JPanel();
@@ -59,14 +63,14 @@ public class GUI implements ActionListener
 
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("OTP Generator");
+        frame.setTitle("MK OTP Generator");
         frame.pack();
         frame.setVisible(true);
     }
 
     public static void main(String[] args)
     {
-        new GUI();
+        new OtpGenerator();
     }
 
     @Override
